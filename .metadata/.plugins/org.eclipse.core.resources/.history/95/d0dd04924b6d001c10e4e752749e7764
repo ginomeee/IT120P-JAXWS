@@ -1,0 +1,12 @@
+package com.gino.operator.fx;
+import javax.jws.WebService;
+import com.gino.operator.fx.OperatorService;
+
+@WebService
+@SOAPBinding(style=Style.RPC)
+
+public interface OperatorServiceImpl {
+	@WebMethod double getSum(double x, double y);
+	@WebMethod double getProduct(double x, double y);
+	
+}

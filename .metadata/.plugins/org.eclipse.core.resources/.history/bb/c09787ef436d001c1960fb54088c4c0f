@@ -1,0 +1,5 @@
+package com.gino.operator.fx;
+
+public interface OperatorService {
+
+}

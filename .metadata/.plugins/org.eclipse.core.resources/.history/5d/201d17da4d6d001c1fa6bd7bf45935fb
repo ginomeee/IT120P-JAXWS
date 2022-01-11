@@ -1,0 +1,5 @@
+package com.gino.operator.impl;
+
+public class SOAPPublisher {
+
+}

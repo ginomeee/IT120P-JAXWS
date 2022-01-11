@@ -1,0 +1,24 @@
+package com.gino.client;
+
+import java.net.URL;
+import java.net.MalformedURLException;
+
+import javax.xml.namespace.QName;
+import javax.xml.ws.Service;
+
+import com.gino.operator.fx.OperatorService;
+
+public class OperatorClient {
+	public static void main(String[] args) throws MalformedURLException {
+		URL url=new URL("http://localhost:8080/compute?wsdl");
+		QName qname=new QName("http://impl.operator.gino.com/","OperatorServiceImplService");
+		Service service=Service.create(url, qname);
+		
+		OperatorService operator=service.getPort(OperatorService.class);
+		System.out.println(operator.getSum(2,5));
+		System.out.println(operator.getDifference(9, 4));
+		System.out.println(operator.getProduct(2, 8));
+		System.out.println(operator.getQuotient(12, 3));
+	}
+
+}

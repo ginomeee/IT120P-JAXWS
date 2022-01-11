@@ -1,0 +1,11 @@
+package com.gino.operator.fx;
+import javax.jws.WebService;
+
+@WebService
+@SOAPBinding(style=)
+
+public interface OperatorService {
+	double getSum(double x, double y);
+	double getProduct(double x, double y);
+	
+}
